@@ -61,6 +61,8 @@
             // nupAmount
             // 
             nupAmount.Location = new Point(121, 183);
+            nupAmount.Maximum = new decimal(new int[] { 1874919423, 2328306, 0, 0 });
+            nupAmount.Minimum = new decimal(new int[] { 1874919423, 2328306, 0, int.MinValue });
             nupAmount.Name = "nupAmount";
             nupAmount.Size = new Size(150, 27);
             nupAmount.TabIndex = 1;
@@ -131,6 +133,7 @@
             // 
             // bankAccountsGrid
             // 
+            bankAccountsGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             bankAccountsGrid.BackgroundColor = SystemColors.ButtonFace;
             bankAccountsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             bankAccountsGrid.Location = new Point(289, 29);
