@@ -29,41 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            textBox1 = new TextBox();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
+            txtOwner = new TextBox();
+            nupIntrentRate = new NumericUpDown();
+            nupAmount = new NumericUpDown();
             btnDeposit = new Button();
             btnWithDraw = new Button();
             btnCreateAccount = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            bankAccountsGrid = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)nupIntrentRate).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nupAmount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bankAccountsGrid).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // txtOwner
             // 
-            textBox1.Location = new Point(121, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 27);
-            textBox1.TabIndex = 0;
+            txtOwner.Location = new Point(121, 29);
+            txtOwner.Name = "txtOwner";
+            txtOwner.Size = new Size(150, 27);
+            txtOwner.TabIndex = 0;
             // 
-            // numericUpDown1
+            // nupIntrentRate
             // 
-            numericUpDown1.Location = new Point(121, 79);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(150, 27);
-            numericUpDown1.TabIndex = 1;
+            nupIntrentRate.Location = new Point(121, 79);
+            nupIntrentRate.Name = "nupIntrentRate";
+            nupIntrentRate.Size = new Size(150, 27);
+            nupIntrentRate.TabIndex = 1;
             // 
-            // numericUpDown2
+            // nupAmount
             // 
-            numericUpDown2.Location = new Point(121, 183);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(150, 27);
-            numericUpDown2.TabIndex = 1;
+            nupAmount.Location = new Point(121, 183);
+            nupAmount.Name = "nupAmount";
+            nupAmount.Size = new Size(150, 27);
+            nupAmount.TabIndex = 1;
             // 
             // btnDeposit
             // 
@@ -74,6 +74,7 @@
             btnDeposit.TabIndex = 2;
             btnDeposit.Text = "Deposit";
             btnDeposit.UseVisualStyleBackColor = true;
+            btnDeposit.Click += btnDeposit_Click;
             // 
             // btnWithDraw
             // 
@@ -84,6 +85,7 @@
             btnWithDraw.TabIndex = 3;
             btnWithDraw.Text = "Withdraw";
             btnWithDraw.UseVisualStyleBackColor = true;
+            btnWithDraw.Click += btnWithDraw_Click;
             // 
             // btnCreateAccount
             // 
@@ -94,6 +96,7 @@
             btnCreateAccount.TabIndex = 4;
             btnCreateAccount.Text = "Create Account";
             btnCreateAccount.UseVisualStyleBackColor = true;
+            btnCreateAccount.Click += btnCreateAccount_Click;
             // 
             // label1
             // 
@@ -126,15 +129,15 @@
             label3.Text = "Amount";
             label3.TextAlign = ContentAlignment.TopRight;
             // 
-            // dataGridView1
+            // bankAccountsGrid
             // 
-            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(289, 29);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(499, 252);
-            dataGridView1.TabIndex = 8;
+            bankAccountsGrid.BackgroundColor = SystemColors.ButtonFace;
+            bankAccountsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            bankAccountsGrid.Location = new Point(289, 29);
+            bankAccountsGrid.Name = "bankAccountsGrid";
+            bankAccountsGrid.RowHeadersWidth = 51;
+            bankAccountsGrid.Size = new Size(499, 252);
+            bankAccountsGrid.TabIndex = 8;
             // 
             // Form1
             // 
@@ -142,38 +145,38 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(800, 292);
-            Controls.Add(dataGridView1);
+            Controls.Add(bankAccountsGrid);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnCreateAccount);
             Controls.Add(btnWithDraw);
             Controls.Add(btnDeposit);
-            Controls.Add(numericUpDown2);
-            Controls.Add(numericUpDown1);
-            Controls.Add(textBox1);
+            Controls.Add(nupAmount);
+            Controls.Add(nupIntrentRate);
+            Controls.Add(txtOwner);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bank Account";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nupIntrentRate).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nupAmount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bankAccountsGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
+        private TextBox txtOwner;
+        private NumericUpDown nupIntrentRate;
+        private NumericUpDown nupAmount;
         private Button btnDeposit;
         private Button btnWithDraw;
         private Button btnCreateAccount;
         private Label label1;
         private Label label2;
         private Label label3;
-        private DataGridView dataGridView1;
+        private DataGridView bankAccountsGrid;
     }
 }
